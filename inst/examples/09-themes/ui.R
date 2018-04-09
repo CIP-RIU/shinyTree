@@ -13,7 +13,7 @@ shinyUI(
     ),
     mainPanel(
       "Theme: default",
-      shinyTree("tree", theme="default"),
+      shinyTree("tree", theme="proton", checkbox = TRUE),
       hr(),
       "Theme: default-dark",
       shinyTree("tree2", theme="default-dark"),
@@ -22,6 +22,6 @@ shinyUI(
       shinyTree("tree3", theme="proton"),
       hr(),
       "Theme: proton without icons and dots",
-      shinyTree("tree4", theme="proton", theme_icons = FALSE, theme_dots = FALSE)
+      shinyTree("tree4",  themeIcons = FALSE, themeDots = FALSE)
     )
   ))

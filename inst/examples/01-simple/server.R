@@ -5,12 +5,15 @@ library(shinyTree)
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 shinyServer(function(input, output, session) {
   output$tree <- renderTree({
-    list(
-      root1 = "",
-      root2 = list(
-        SubListA = list(leaf1 = "", leaf2 = "", leaf3=""),
-        SubListB = list(leafA = "", leafB = "")
-      )
-    )
+    # list(
+    #   root1 = "",
+    #   root2 = list(
+    #     SubListA = list(leaf1 = "", leaf2 = "", leaf3=""),
+    #     SubListB = list(leafA = "", leafB = "")
+    #   )
+    # )
+    tree <- readRDS("agro_features_list.rds")
+    tree
+    
   })
 })
